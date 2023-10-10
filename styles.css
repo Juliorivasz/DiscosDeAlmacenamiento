@@ -1,0 +1,60 @@
+body {
+    background: url(/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    margin: 2rem;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+div, section, article {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 300px;
+    margin: auto;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #0130ff;
+}
+
+.contenedor_icon {
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedor_icon:hover {
+    cursor: pointer;
+}
+
+.conteneder_parrafos {
+    height: 0;
+    overflow: hidden;
+}
+
+.mostrar_parrafos {
+    height: 100%;
+}
+
+.lista_bibliografia {
+    list-style: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
