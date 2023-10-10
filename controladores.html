@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Controladores</title>
+</head>
+<body>
+    <header>
+        <h1>Controladores</h1>
+        <h2><a href="./index.html">Inicio</a></h2>
+        <h2><a href="./discoDuro.html">Disco Duros</a></h2>
+    </header>
+    <main>
+        <article class="Controlador">
+            <h2>¿Que es un controlador?</h2>
+            <p class="parrafo">
+              En el sentido más fundamental, un controlador es un componente de
+              software que permite al sistema operativo y un dispositivo comunicarse
+              entre sí. Por ejemplo, supongamos que una aplicación debe leer algunos
+              datos de un dispositivo. La aplicación llama a una función
+              implementada por el sistema operativo y el sistema operativo llama a
+              una función implementada por el controlador. El controlador, escrito
+              por la misma empresa que diseñó y fabricó el dispositivo, sabe cómo
+              comunicarse con el hardware del dispositivo para obtener los datos.
+              Una vez que el controlador obtiene los datos del dispositivo, devuelve
+              los datos al sistema operativo, que lo devuelve a la aplicación.
+            </p>
+            <img src="./img/Grafico Driver.PNG" alt="grafico driver" />
+            <p>
+              No todos los controladores deben ser escritos por la empresa que
+              diseñó el dispositivo. En muchos casos, un dispositivo está diseñado
+              según un estándar de hardware publicado. Por lo tanto, Microsoft puede
+              escribir el controlador y el diseñador de dispositivos no tiene que
+              proporcionar un controlador.
+            </p>
+            <p>
+              No todos los controladores se comunican directamente con un
+              dispositivo. Para una solicitud de E/S determinada (como leer datos de
+              un dispositivo), a menudo hay varios controladores superpuestos en una
+              pila de controladores que participan en la solicitud. La forma
+              convencional de visualizar la pila es con el primer participante en la
+              parte superior y el último participante de la parte inferior, como se
+              muestra en este diagrama. Algunos de los controladores de la pila
+              pueden participar mediante la transformación de la solicitud de un
+              formato a otro. Estos controladores no se comunican directamente con
+              el dispositivo; simplemente manipulan la solicitud y pasan la
+              solicitud a los controladores que están más bajos en la pila.
+            </p>
+            <img src="./img/grafico driver 2.PNG" alt="grafico driver 2" />
+            <p>
+              Controlador de función: el controlador de la pila que se comunica
+              directamente con el dispositivo se denomina controlador de función.
+              Controlador de filtro: los controladores que realizan el procesamiento
+              auxiliar se denominan controladores de filtro.
+            </p>
+            <p>
+              Algunos controladores de filtro observan y registran información sobre
+              las solicitudes de E/S, pero no participan activamente en ellas. Por
+              ejemplo, algunos controladores de filtro actúan como comprobadores
+              para asegurarse de que los demás controladores de la pila controlan
+              correctamente la solicitud de E/S.
+            </p>
+            <p>
+              Podríamos ampliar nuestra definición de controlador diciendo que un
+              controlador es cualquier componente de software que observe o
+              participe en la comunicación entre el sistema operativo y un
+              dispositivo.
+            </p>
+          </article>
+          <article>
+            <h2>Controlador RAID</h2>
+            <p>
+              Un controlador RAID es una tarjeta o chip ubicado entre el sistema
+              operativo y una unidad de almacenamiento (generalmente un disco duro).
+            </p>
+            <img src="./img/raid.PNG" alt="RAID" />
+            <h3>¿Qué hace un controlador RAID?</h3>
+            <p>
+              Virtualiza las unidades en diferentes grupos con características
+              específicas de protección de datos y redundancia. La interfaz
+              front-end normalmente se comunica con el servidor a través de un
+              adaptador basado en host (HBA). El backend se comunica con el medio de
+              almacenamiento subyacente y lo administra; generalmente es ATA, SCSI,
+              SATA, SAS o Fibre Channel.
+            </p>
+            <p>
+              Los controladores RAID se clasifican por las múltiples características
+              que incluyen tipos de unidades (como SATA o SAS), niveles RAID
+              específicos y el número de puertos y unidades compatibles. El
+              controlador RAID no es un controlador de almacenamiento. El
+              controlador de almacenamiento proporciona el disco activo al sistema,
+              mientras que el controlador RAID actúa como caché de RAM y proporciona
+              funciones RAID.
+            </p>
+            <h3>Controladores RAID de hardware VS software</h3>
+            <ul>
+              <li>
+                Basado en hardware: Los controladores RAID de hardware son
+                dispositivos dedicados diseñados para gestionar las configuraciones
+                RAID de un conjunto de discos. Existen dos variantes principales:
+                tarjetas controladoras RAID y RAID en chip interno.
+              </li>
+              <li>
+                Tarjetas controladoras RAID: Son dispositivos físicos que se
+                insertan en las ranuras PCIe o PCI-X de una placa base. Estas
+                tarjetas incorporan su propio procesador RAID y procesador de E/S
+                con interfaz de unidad independiente, lo que les permite administrar
+                y controlar completamente los discos conectados.
+              </li>
+              <li>
+                RAID en chip: Esta opción más económica implica la integración de un
+                chip RAID en la placa base. Este chip único incluye una interfaz de
+                host, una interfaz de E/S para los discos duros, un procesador RAID
+                y un controlador de memoria.
+              </li>
+              <li>
+                Basado en software: Los controladores RAID de software operan desde
+                el sistema host en lugar de un dispositivo físico independiente
+              </li>
+              <li>
+                RAID solo de software: Este enfoque utiliza las funciones RAID
+                nativas del sistema operativo anfitrión y se considera la opción más
+                económica. El cálculo de RAID y la gestión de discos se realizan a
+                través de la aplicación basada en el host,utilizando controladores
+                nativos de host bus adapter (HBA) o interfaces de E/S para
+                comunicarse con las unidades de almacenamiento.
+              </li>
+              <li>
+                RAID híbrido de hardware/software: Este enfoque combina las funciones de BIOS
+    RAID proporcionadas por la placa base o un HBA con un componente de hardware
+    adicional. Esta tecnología híbrida agrega una capa adicional de administración y,
+    aunque aumenta el costo en comparación con el RAID solo de software, ofrece
+    protección contra errores de inicio del sistema operativo.
+              </li>
+            </ul>
+            <h4>Diferentes niveles RAID</h4>
+            <ul>
+                <li>
+                    RAID 0 (Striping): Este nivel divide los datos en dos o más discos, lo que mejora
+    significativamente el rendimiento. Sin embargo, no proporciona redundancia, lo que
+    significa que si un disco falla, se pierden todos los datos.
+                </li>
+                <li>
+                  RAID 1 (Duplicación): RAID 1 utiliza dos o más discos para duplicar los datos, lo
+    que proporciona una copia exacta en cada disco. Esta duplicación ofrece redundancia
+    de datos y conmutación por error si uno de los discos falla.
+                </li>
+                <li>
+                  RAID 5/6 (Striping con paridad/doble paridad): Estos niveles combinan el
+    rendimiento de RAID 0 con la redundancia de RAID 1. Utilizan paridad (o doble paridad
+    en RAID 6) para proteger los datos. Estos niveles son eficaces y eficientes en cuanto a
+    capacidad.
+                </li>
+                <li>
+                  RAID 10 (Striping y Mirroring): RAID 10 es una combinación de RAID 0 y RAID 1.
+    Los datos se dividen en dos discos y se espejan en otros dos. Esto proporciona un alto
+    rendimiento y redundancia, aunque es más costoso en términos de almacenamiento.
+                </li>
+            </ul>
+          </article>
+    </main>
+    <footer>
+      <div>
+        <h2>Integrantes: </h2>
+        <ul>
+          <li><strong>Eros Mariotti</strong></li>
+          <li><strong>Laureano Berna</strong></li>
+          <li><strong>Jennifer Contreras</strong></li>
+          <li><strong>Julieta Sena</strong></li>
+          <li><strong>Chiara Moyano</strong></li>
+          <li><strong>Julio Rivas</strong></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Bibliografia: </h2>
+        <ul class="lista_bibliografia">
+          <li>
+            <a href="https://www.elgrupoinformatico.com/noticias/disco-duro-que-tipos-como-funciona-t79244.html">
+              Disco duro: qué es, tipos y cómo funciona (elgrupoinformatico.com).
+            </a>
+          </li>
+          <li><a href="https://es.ccm.net/aplicaciones-e-internet/museo-de-internet/enciclopedia/11014-que-es-un-disco-duro-y-como-funciona/">
+            Fuente: Disco duro: qué es y cuál es su función (ccm.net)
+          </a></li>
+          <li><a href="https://www.computerhope.com/jargon/h/harddriv.htm">
+            Fuente: ¿Qué es un disco duro? (computerhope.com)
+          </a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Hard_disk_drive">
+            Fuente: Unidad de disco duro - Wikipedia, la enciclopedia libre
+          </a></li>
+        </ul>
+      </div>
+    </footer>
+    
+</body>
+</html>
