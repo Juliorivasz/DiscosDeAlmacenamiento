@@ -1,122 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Discos de almacenamiento</title>
-</head>
-<body>
-    <header>
-        <h1>Discos de almacenamiento</h1>
-        <h2><a href="./discoDuro.html">Disco Duros</a></h2>
-        <h2><a href="./controladores.html">Controladores</a></h2>
-    </header>
-    <main>
-        <section class="contenedor_Conclusion">
-            <div class="contenedor_icon">
-              <h2 class="titulo_conclusion">Conclusion</h2>
-              <span class="material-symbols-outlined">
-                add
-              </span>
-            </div>
-            <div class="conteneder_parrafos">
-              <p>Un controlador es un componente de software o hardware que facilita la
-                comunicación entre el sistema operativo de una computadora y un dispositivo o
-                componente de hardware. Su función principal es permitir que el sistema operativo y el
-                dispositivo se comuniquen y trabajen juntos de manera eficiente. Los controladores
-                actúan como intermediarios que traducen las solicitudes del sistema operativo en
-                comandos que el dispositivo puede entender y ejecutar. Estos pueden ser
-                proporcionados por el fabricante del dispositivo o desarrollados por terceros para
-                dispositivos que siguen estándares de hardware.
-                </p>
-              <p>Un disco duro es una unidad física de almacenamiento de datos que utiliza discos
-                giratorios recubiertos de una capa magnética para almacenar información en forma de
-                ceros y unos. El controlador del disco duro es una parte esencial en el funcionamiento
-                de esta unidad de almacenamiento ya que actúa como el intermediario clave entre el
-                sistema operativo y el hardware del disco duro, desempeñando varias funciones
-                cruciales para garantizar la eficiencia y confiabilidad en el almacenamiento y
-                recuperación de datos.
-                </p>
-              <p>El controlador traduce las solicitudes del software en comandos comprensibles para
-                el disco duro, dirigiendo con precisión los movimientos de los cabezales de
-                lectura/escritura. Además, coordina estos movimientos con la velocidad de rotación del
-                disco y gestiona una memoria caché temporal para optimizar el rendimiento.
-                </p>
-              <p>Una de sus funciones más importantes es la detección y administración de errores,
-                identificando sectores dañados y asegurándose de que los datos se almacenen de
-                manera segura. También desempeña un papel crítico en la organización y optimización
-                de la secuencia de lectura/escritura, mejorando la eficiencia en la transferencia de
-                datos.
-                </p>
-              <p>Su capacidad para posicionar con precisión, generar campos magnéticos y amplificar
-                señales eléctricas es esencial para el funcionamiento confiable de los discos duros, lo
-                que los convierte en una parte esencial de la infraestructura de almacenamiento de
-                datos en muchas computadoras y sistemas de almacenamiento.
-                </p>
-              <p>Luego de leer datos en el disco duro, estos son almacenados en un buffer como un
-                registro de archivos en bits(unidad binaria) donde el controlador del disco se encarga
-                de colocarlos en el bus de datos, para luego ser enviado un bit detrás de otro.
-                </p>
-              <p>Al terminar la transferencia de bits, el controlador de almacenamiento de la
-                computadora recibe los datos del bus y los transfiere a la memoria principal(RAM)
-                mediante los protocolos de transferencia adecuados. Una vez finalizada la
-                transferencia, el SO o la aplicación que solicitó la información procede a decodificar el
-                buffer. Si los datos en el buffer representan texto, el sistema operativo utilizará
-                algoritmos de codificación y decodificación, como UTF-8 o ASCII, para convertir los
-                datos binarios en caracteres legibles por nosotros. Si los datos son una imagen, se
-                utilizarán algoritmos de decodificación de formatos de imagen, como JPEG o PNG, para
-                mostrar la imagen en la pantalla.
-                </p>
-                <img src="/img/diagrama controlador.png" alt="diagrama del controlador">
-                <p>Además, los controladores de disco duro pueden ser interfaces físicas o tarjetas
-                  controladoras que conectan el disco duro a la placa madre de la computadora. Estos
-                  controladores aseguran que la información fluya entre el sistema operativo y el disco
-                  duro de manera eficiente y confiable.
-                  </p>
-                <p>En resumen, los controladores son esenciales para el funcionamiento de los discos
-                  duros y aseguran que estos dispositivos de almacenamiento funcionen correctamente,
-                  permitiendo que los datos se escriban y lean de manera eficiente. La tarjeta
-                  controladora de disco duro desempeña un papel crucial en la gestión de esta
-                  comunicación en discos duros internos y externos, lo que garantiza que los datos se
-                  almacenen y recuperen de manera confiable.
-                  </p>
-            </div>
-          </section>
-    </main>
-    <footer>
-        <div>
-          <h2>Integrantes: </h2>
-          <ul>
-            <li><strong>Eros Mariotti</strong></li>
-            <li><strong>Laureano Berna</strong></li>
-            <li><strong>Jennifer Contreras</strong></li>
-            <li><strong>Julieta Sena</strong></li>
-            <li><strong>Chiara Moyano</strong></li>
-            <li><strong>Julio Rivas</strong></li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Inicio</title>
+  </head>
+
+  <body>
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto"></ul>
+          </div>
         </div>
+      </nav>
+      <main>
+        <h1>Discos de Almacenamiento</h1>
+        <ul id="listaLinks">
+          <li>
+            <a href="./controladores.html" class="button-81" role="button"
+              >Controladores</a
+            >
+          </li>
+          <li>
+            <a href="./discoDuro.html" class="button-81" role="button"
+              >Disco Duro</a
+            >
+          </li>
+          <li>
+            <a href="./extras.html" class="button-81" role="button">Extras</a>
+          </li>
+          <li>
+            <a href="./bibliografia.html" class="button-81" role="button"
+              >Bibliografía</a
+            >
+          </li>
+        </ul>
+        <section class="contenedor_Conclusion">
+          <div class="contenedor_icon">
+            <h2 class="button-81" role="button">Conclusión</h2>
+            <span class="material-symbols-outlined"> </span>
+          </div>
+          <div class="conteneder_parrafos">
+            <p>
+              Un controlador es un componente de software o hardware que
+              facilita la comunicación entre el sistema operativo de una
+              computadora y un dispositivo o componente de hardware. Su función
+              principal es permitir que el sistema operativo y el dispositivo se
+              comuniquen y trabajen juntos de manera eficiente. Los
+              controladores actúan como intermediarios que traducen las
+              solicitudes del sistema operativo en comandos que el dispositivo
+              puede entender y ejecutar. Estos pueden ser proporcionados por el
+              fabricante del dispositivo o desarrollados por terceros para
+              dispositivos que siguen estándares de hardware.
+            </p>
+            <p>
+              Un disco duro es una unidad física de almacenamiento de datos que
+              utiliza discos giratorios recubiertos de una capa magnética para
+              almacenar información en forma de ceros y unos. El controlador del
+              disco duro es una parte esencial en el funcionamiento de esta
+              unidad de almacenamiento ya que actúa como el intermediario clave
+              entre el sistema operativo y el hardware del disco duro,
+              desempeñando varias funciones cruciales para garantizar la
+              eficiencia y confiabilidad en el almacenamiento y recuperación de
+              datos.
+            </p>
+            <p>
+              El controlador traduce las solicitudes del software en comandos
+              comprensibles para el disco duro, dirigiendo con precisión los
+              movimientos de los cabezales de lectura/escritura. Además,
+              coordina estos movimientos con la velocidad de rotación del disco
+              y gestiona una memoria caché temporal para optimizar el
+              rendimiento.
+            </p>
+            <p>
+              Una de sus funciones más importantes es la detección y
+              administración de errores, identificando sectores dañados y
+              asegurándose de que los datos se almacenen de manera segura.
+              También desempeña un papel crítico en la organización y
+              optimización de la secuencia de lectura/escritura, mejorando la
+              eficiencia en la transferencia de datos.
+            </p>
+            <p>
+              Su capacidad para posicionar con precisión, generar campos
+              magnéticos y amplificar señales eléctricas es esencial para el
+              funcionamiento confiable de los discos duros, lo que los convierte
+              en una parte esencial de la infraestructura de almacenamiento de
+              datos en muchas computadoras y sistemas de almacenamiento.
+            </p>
+            <p>
+              Luego de leer datos en el disco duro, estos son almacenados en un
+              buffer como un registro de archivos en bits(unidad binaria) donde
+              el controlador del disco se encarga de colocarlos en el bus de
+              datos, para luego ser enviado un bit detrás de otro.
+            </p>
+            <p>
+              Al terminar la transferencia de bits, el controlador de
+              almacenamiento de la computadora recibe los datos del bus y los
+              transfiere a la memoria principal(RAM) mediante los protocolos de
+              transferencia adecuados. Una vez finalizada la transferencia, el
+              SO o la aplicación que solicitó la información procede a
+              decodificar el buffer. Si los datos en el buffer representan
+              texto, el sistema operativo utilizará algoritmos de codificación y
+              decodificación, como UTF-8 o ASCII, para convertir los datos
+              binarios en caracteres legibles por nosotros. Si los datos son una
+              imagen, se utilizarán algoritmos de decodificación de formatos de
+              imagen, como JPEG o PNG, para mostrar la imagen en la pantalla.
+            </p>
+            <img
+              src="./img/diagrama controlador.png"
+              alt="diagrama del controlador"
+            />
+            <p>
+              Además, los controladores de disco duro pueden ser interfaces
+              físicas o tarjetas controladoras que conectan el disco duro a la
+              placa madre de la computadora. Estos controladores aseguran que la
+              información fluya entre el sistema operativo y el disco duro de
+              manera eficiente y confiable.
+            </p>
+            <p>
+              En resumen, los controladores son esenciales para el
+              funcionamiento de los discos duros y aseguran que estos
+              dispositivos de almacenamiento funcionen correctamente,
+              permitiendo que los datos se escriban y lean de manera eficiente.
+              La tarjeta controladora de disco duro desempeña un papel crucial
+              en la gestión de esta comunicación en discos duros internos y
+              externos, lo que garantiza que los datos se almacenen y recuperen
+              de manera confiable.
+            </p>
+            <a href="#">Ir Arriba</a>
+          </div>
+        </section>
+      </main>
+      <footer>
         <div>
-          <h2>Bibliografia: </h2>
-          <ul class="lista_bibliografia">
-            <li>
-              <a href="https://www.elgrupoinformatico.com/noticias/disco-duro-que-tipos-como-funciona-t79244.html">
-                Disco duro: qué es, tipos y cómo funciona (elgrupoinformatico.com).
-              </a>
-            </li>
-            <li><a href="https://es.ccm.net/aplicaciones-e-internet/museo-de-internet/enciclopedia/11014-que-es-un-disco-duro-y-como-funciona/">
-              Fuente: Disco duro: qué es y cuál es su función (ccm.net)
-            </a></li>
-            <li><a href="https://www.computerhope.com/jargon/h/harddriv.htm">
-              Fuente: ¿Qué es un disco duro? (computerhope.com)
-            </a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Hard_disk_drive">
-              Fuente: Unidad de disco duro - Wikipedia, la enciclopedia libre
-            </a></li>
-          </ul>
+          <h2>Integrantes:</h2>
+          <div class="integrantes">
+            <img class="avatar" src="./img/eros.jpeg" alt="" />
+            <strong>Eros Mariotti</strong>
+            <img class="avatar" src="./img/avatar1.jpg" alt="" />
+            <strong>Laureano Berna</strong>
+            <img class="avatar" src="./img/avatarJenny.jpeg" alt="" />
+            <strong>Jennifer Contreras</strong>
+            <img class="avatar" src="./img/julieta.png" alt="" />
+            <strong>Julieta Sena</strong>
+            <img class="avatar" src="./img/chiara.png" alt="" />
+            <strong>Chiara Moyano</strong>
+            <img class="avatar" src="./img/julio.png" alt="" />
+            <strong>Julio Rivas</strong>
+          </div>
         </div>
       </footer>
-      <script src="app.js"></script>
-</body>
+      <script src="navbar.js"></script>
+      <script src="./app.js"></script>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Extras</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto"></ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="tarjeta">
+      <div class="titulo"><h2>Controlador RAID</h2></div>
+      <div class="cuerpo">
+        <img src="./img/raid.PNG" alt="muestra" />
+        <p>
+          Un controlador RAID es una tarjeta o chip ubicado entre el sistema
+          operativo y una unidad de almacenamiento (generalmente un disco duro).
+        </p>
+        <h4>¿Qué hace un controlador RAID?</h4>
+        <p>
+          Virtualiza las unidades en diferentes grupos con características
+          específicas de protección de datos y redundancia. La interfaz
+          front-end normalmente se comunica con el servidor a través de un
+          adaptador basado en host (HBA). El backend se comunica con el medio de
+          almacenamiento subyacente y lo administra; generalmente es ATA, SCSI,
+          SATA, SAS o Fibre Channel.
+        </p>
+        <p>
+          Los controladores RAID se clasifican por las múltiples características
+          que incluyen tipos de unidades (como SATA o SAS), niveles RAID
+          específicos y el número de puertos y unidades compatibles. El
+          controlador RAID no es un controlador de almacenamiento. El
+          controlador de almacenamiento proporciona el disco activo al sistema,
+          mientras que el controlador RAID actúa como caché de RAM y proporciona
+          funciones RAID.
+        </p>
+        <h4>Controladores RAID de hardware VS software</h4>
+        <br />
+        <h4>Basado en hardware</h4>
+        <ul>
+          <li>
+            Los controladores RAID de hardware son dispositivos dedicados
+            diseñados para gestionar las configuraciones RAID de un conjunto de
+            discos. Existen dos variantes principales: tarjetas controladoras
+            RAID y RAID en chip interno.
+          </li>
+          <li>
+            Tarjetas controladoras RAID: Son dispositivos físicos que se
+            insertan en las ranuras PCIe o PCI-X de una placa base. Estas
+            tarjetas incorporan su propio procesador RAID y procesador de E/S
+            con interfaz de unidad independiente, lo que les permite administrar
+            y controlar completamente los discos conectados.
+          </li>
+          <li>
+            RAID en chip: Esta opción más económica implica la integración de un
+            chip RAID en la placa base. Este chip único incluye una interfaz de
+            host, una interfaz de E/S para los discos duros, un procesador RAID
+            y un controlador de memoria.
+          </li>
+        </ul>
+        <h4>Basado en software</h4>
+        <ul>
+          <li>
+            Los controladores RAID de software operan desde el sistema host en
+            lugar de un dispositivo físico independiente.
+          </li>
+          <li>
+            Este enfoque utiliza las funciones RAID nativas del sistema
+            operativo anfitrión y se considera la opción más económica. El
+            cálculo de RAID y la gestión de discos se realizan a través de la
+            aplicación basada en el host,utilizando controladores nativos de
+            host bus adapter (HBA) o interfaces de E/S para comunicarse con las
+            unidades de almacenamiento.
+          </li>
+        </ul>
+        <h4>RAID híbrido de hardware/software</h4>
+        <ul>
+          <li>
+            Este enfoque combina las funciones de BIOS RAID proporcionadas por
+            la placa base o un HBA con un componente de hardware adicional. Esta
+            tecnología híbrida agrega una capa adicional de administración y,
+            aunque aumenta el costo en comparación con el RAID solo de software,
+            ofrece protección contra errores de inicio del sistema operativo.
+          </li>
+        </ul>
+        <h4>Diferentes niveles RAID</h4>
+        <ul>
+          <li>
+            RAID 0 (Striping): Este nivel divide los datos en dos o más discos,
+            lo que mejora significativamente el rendimiento. Sin embargo, no
+            proporciona redundancia, lo que significa que si un disco falla, se
+            pierden todos los datos.
+          </li>
+          <li>
+            RAID 1 (Duplicación): RAID 1 utiliza dos o más discos para duplicar
+            los datos, lo que proporciona una copia exacta en cada disco. Esta
+            duplicación ofrece redundancia de datos y conmutación por error si
+            uno de los discos falla.
+          </li>
+          <li>
+            RAID 5/6 (Striping con paridad/doble paridad): Estos niveles
+            combinan el rendimiento de RAID 0 con la redundancia de RAID 1.
+            Utilizan paridad (o doble paridad en RAID 6) para proteger los
+            datos. Estos niveles son eficaces y eficientes en cuanto a
+            capacidad.
+          </li>
+          <li>
+            RAID 10 (Striping y Mirroring): RAID 10 es una combinación de RAID 0
+            y RAID 1. Los datos se dividen en dos discos y se espejan en otros
+            dos. Esto proporciona un alto rendimiento y redundancia, aunque es
+            más costoso en términos de almacenamiento.
+          </li>
+        </ul>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo"><h2>Accesos e Interfaces</h2></div>
+      <div class="cuerpo">
+        <img src="./img/sata1998.jpg" alt="muestra" />
+        <p>
+          Las unidades de disco duro se conectan a las computadoras a través de
+          diversos tipos de interfaces, incluyendo ATA paralelo, ATA serie,
+          SCSI, SAS (SCSI conectado en serie), canal de fibra, IEEE 1394, USB,
+          entre otros. Estas interfaces son digitales y permiten la comunicación
+          entre la unidad y el sistema, independientemente de cómo se codifican
+          los datos internamente en la unidad o cuántos discos y cabezales
+          físicos tenga la unidad.
+        </p>
+        <p>
+          Para procesar las señales analógicas de los cabezales de
+          lectura/escritura, las unidades modernas utilizan un DSP (Procesador
+          de Señal Digital) que emplea técnicas como PRML y corrección de
+          errores Reed-Solomon. Esto permite decodificar los datos y enviarlos a
+          la interfaz estándar. El DSP también monitorea la tasa de errores,
+          realiza reasignaciones de sectores defectuosos y recopila datos para
+          funciones de autodiagnóstico y análisis.
+        </p>
+        <p>
+          Las interfaces modernas utilizan un solo cable de datos/control para
+          conectar la unidad al host, junto con un cable de alimentación directo
+          a la fuente de alimentación. En contraste, las interfaces más antiguas
+          requerían cables separados para señales de datos y control.
+        </p>
+        <p>Algunos de los estándares de interfaz más conocidos incluyen:</p>
+        <ul>
+          <li>
+            SCSI (Small Computer System Interface): Utilizado en servidores,
+            estaciones de trabajo y computadoras como Amiga, Atari ST y
+            Macintosh. Aunque muchas computadoras han migrado a interfaces más
+            nuevas, el conjunto de comandos SCSI todavía se utiliza en la
+            interfaz SAS moderna.
+          </li>
+          <li>
+            IDE (Integrated Drive Electronics), también conocido como ATA
+            (Advanced Technology Attachment): Movió el controlador HDD de la
+            tarjeta de interfaz a la unidad de disco, lo que estandarizó la
+            interfaz host/controlador y redujo la complejidad. IDE utilizaba
+            cables de 40 pines, que posteriormente se actualizaron a cables de
+            80 conductores para admitir modos de alta velocidad como UDMA.
+          </li>
+          <li>
+            EIDE (Enhanced Integrated Drive Electronics): Una mejora no oficial
+            de IDE que introdujo DMA para transferir datos directamente entre la
+            memoria y el disco sin la intervención de la CPU.
+          </li>
+          <li>
+            Fibre Channel (FC): Un sucesor de la interfaz SCSI en el ámbito
+            empresarial, utilizado en redes de almacenamiento (SAN). Aunque se
+            llama "Fibre," a menudo se utiliza cobre en lugar de fibra óptica
+            para conexiones de unidad.
+          </li>
+          <li>
+            SAS (Serial Attached SCSI): Un protocolo de comunicación serie que
+            permite transferencias de datos a alta velocidad y es compatible con
+            SATA. Utiliza una conexión mecánicamente compatible con discos duros
+            SATA estándar.
+          </li>
+          <li>
+            SATA (Serial ATA): Utilizado comúnmente en computadoras personales,
+            utilizan conexiones serie para la transmisión de datos. Las unidades
+            SATA pueden ser controladas por controladores SAS en algunos casos,
+            pero no al revés.
+          </li>
+        </ul>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">
+        <h2>¿Por qué un ordenador necesita un disco duro?</h2>
+      </div>
+      <div class="cuerpo">
+        <img src="./img/mejores-ordenadores-portatiles.jpg" alt="" />
+        <p>
+          Una computadora requiere un sistema operativo para permitir a los
+          usuarios interactuar con ella y usarla. El sistema operativo
+          interpreta los movimientos del teclado y el ratón y facilita la
+          utilización del software, como un navegador de Internet, un procesador
+          de textos y videojuegos. Para instalar un sistema operativo de
+          computadora, se requiere un disco duro (u otro dispositivo de
+          almacenamiento). El dispositivo de almacenamiento proporciona el medio
+          de almacenamiento donde se instala y almacena el sistema operativo.
+        </p>
+        <p>
+          También se requiere un disco duro para instalar cualquier programa u
+          otros archivos que desee mantener en su computadora. Al descargar
+          archivos a su computadora, se almacenan permanentemente en su disco
+          duro u otro medio de almacenamiento hasta que se mueven o desinstalan.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">
+        <h2>¿Cuáles son los tamaños de los discos duros?</h2>
+      </div>
+      <div class="cuerpo">
+        <img src="./img/tamaños.jpeg" alt="" />
+        <p>
+          El disco duro a menudo puede almacenar más datos que cualquier otra
+          unidad, pero su tamaño puede variar según el tipo de unidad y su
+          antigüedad. Los discos duros más antiguos tenían un tamaño de
+          almacenamiento de varios cientos de MB (megabytes) a varios GB
+          (gigabytes). Los discos duros más nuevos tienen un tamaño de
+          almacenamiento de varios cientos de gigabytes a varios TB (terabytes).
+          A medida que se desarrollan nuevas tecnologías, la capacidad
+          disponible ha aumentado y el precio por megabyte ha disminuido.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo"><h2>HDD siendo reemplazado por SSD</h2></div>
+      <div class="cuerpo">
+        <img src="./img/hdd-ssd.jpeg" alt="" />
+        <p>
+          Las SSD (unidades de estado sólido) han comenzado a reemplazar a las
+          HDD (unidades de disco duro) debido a las distintas ventajas de
+          rendimiento que tienen sobre las HDD, incluidos tiempos de acceso más
+          rápidos y menor latencia. Si bien los SSD se están volviendo
+          populares, los HDD continúan siendo utilizados en muchas computadoras
+          de escritorio en gran parte debido al valor por dólar que los HDD
+          ofrecen sobre los SSD. Sin embargo, cada vez más computadoras
+          portátiles están comenzando a utilizar SSD sobre HDD, lo que ayuda a
+          mejorar la confiabilidad y estabilidad de las computadoras portátiles.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo"><h2>Historia del Disco Duro</h2></div>
+      <div class="cuerpo">
+        <img src="./img/historia.jpeg" alt="" />
+        <p>
+          IBM presentó el primer disco duro el 13 de septiembre de 1956. El
+          disco duro se utilizó por primera vez en el sistema RAMAC (método de
+          acceso aleatorio de contabilidad y control) 305, con una capacidad de
+          almacenamiento de 5 MB y un costo de alrededor de $50,000 ($10,000 por
+          megabyte). El disco duro estaba integrado en la computadora y no era
+          extraíble.
+        </p>
+        <p>
+          En 1963, IBM desarrolló el primer disco duro extraíble, con una
+          capacidad de almacenamiento de 2,6 MB.
+        </p>
+        <p>
+          El primer disco duro en tener una capacidad de almacenamiento de un
+          gigabyte también fue desarrollado por IBM en 1980. Pesaba 550 libras y
+          costaba 40.000 dólares.
+        </p>
+        <p>
+          1983 marcó la introducción del primer disco duro de 3,5 pulgadas,
+          desarrollado por Rodime. Tenía una capacidad de almacenamiento de 10
+          MB.
+        </p>
+        <p>
+          Seagate fue la primera compañía en introducir un disco duro de 7200
+          RPM (revoluciones por minuto) en 1992. Seagate también introdujo el
+          primer disco duro de 10.000 RPM en 1996 y el primer disco duro de
+          15.000 RPM en 2000.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <footer>
+      <a href="#">Ir Arriba</a>
+    </footer>
+    <script src="./navbar.js"></script>
+  </body>
+</html>

@@ -2,492 +2,367 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discos duros</title>
+    <title>Disco Duro</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="./app.js" defer></script>
   </head>
+
   <body>
     <header>
-      <h1>Discos Duros</h1>
-      <h2><a href="./index.html">Inicio</a></h2>
-      <h2><a href="./controladores.html">Controladores</a></h2>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto"></ul>
+          </div>
+        </div>
+      </nav>
     </header>
-
+    <div>
+      <h2>¿Que es un disco duro?</h2>
+      <p>
+        Un disco duro es una unidad física de almacenamiento de datos, que
+        permite al equipo almacenar grandes cantidades de información, y hace
+        posible la lectura y escritura al mismo tiempo. La memoria de los discos
+        duros no es volátil, es decir que los datos que ocupamos en dicho disco
+        permanecen ahí hasta ser ocupados por otros o eliminados de manera
+        permanente con un formateo a bajo nivel, de lo contrario se podrían
+        obtener con un recuperador de archivos.
+      </p>
+      <img src="./img/harddrive.jpg" alt="disco duro" />
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Estructura del Disco Duro</div>
+      <div class="cuerpo">
+        <p>
+          Un disco rígido no está compuesto por un solo disco, sino por varios
+          discos rígidos que pueden ser de metal, vidrio o cerámica, apilados
+          muy juntos entre sí y llamados platos.
+        </p>
+        <img
+          src="./img/estructura disco duro.PNG"
+          alt="Estructura de disco duro"
+        />
+        <p>
+          Los discos giran rápidamente alrededor de un eje (en realidad, a
+          varios miles de revoluciones por minuto) en sentido contrario a las
+          agujas de un reloj. El ordenador funciona en modo binario, lo cual
+          significa que los datos se almacenan en forma de ceros y unos
+          (denominados bits).
+        </p>
+        <p>
+          Los discos rígidos contienen millones de estos bits, almacenados muy
+          próximos unos de otros en una delgada capa magnética de unos pocos
+          micrones de espesor, recubierta a su vez por una película protectora.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Estructura del Disco Duro</div>
+      <div class="cuerpo">
+        <img src="./img/harddrives.jpg" alt="muestra" />
+        <p>
+          Estos datos pueden leerse y escribirse por medio de cabezales de
+          lectura ubicados a ambos lados de los platos. Estos cabezales son
+          electroimanes que suben y bajan para leer la información o bien
+          escribirla. Los cabezales de lectura se encuentran a solo unos
+          micrones de la superficie, separados por una capa de aire creada por
+          la rotación de los discos, que genera una rotación de aproximadamente
+          250 km/h (150 mph). Más aún, estos cabezales son móviles y se pueden
+          mover hacia los laterales para que las cabezas puedan barrer toda la
+          superficie. Sin embargo, los cabezales se encuentran unidos entre sí y
+          solamente uno de ellos puede leer o escribir en un momento preciso. Se
+          utiliza el término cilindro para hacer referencia a todos los datos
+          almacenados .
+        </p>
+        <p>
+          El mecanismo completo de precisión se encuentra dentro de una caja
+          totalmente hermética, debido a que la más mínima partícula puede
+          degradar la superficie del disco.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">¿Cómo funciona un Disco Duro?</div>
+      <div class="cuerpo">
+        <img src="./img/funcion disco duro.PNG" alt="muestra" />
+        <p>
+          Se dice que los cabezales de lectura/escritura son "inductivos", lo
+          que significa que pueden generar un campo magnético. Esto es de
+          especial importancia en el momento de la escritura: los cabezales, al
+          crear campos positivos o negativos, tienden a polarizar la superficie
+          del disco en un área muy diminuta, de modo tal que cuando luego se
+          leen, la inversión de polaridad procede a completar el circuito con el
+          cabezal de lectura.
+        </p>
+        <p>
+          Los cabezales comienzan a escribir datos comenzando desde el borde del
+          disco y avanzando hacia el centro. Los datos se organizan en círculos
+          concéntricos denominados pistas, creadas por un formateo de bajo
+          nivel. Estas pistas están separadas en zonas (entre dos radios)
+          llamadas sectores, que contienen los datos (por lo menos 512 octetos
+          por sector).
+        </p>
+        <h4>¿Cómo almacenar datos en el Disco Duro?</h4>
+        <p>
+          El cabezal de lectura/escritura en un disco duro es uno de los
+          componentes más críticos y complejos de este dispositivo de
+          almacenamiento. Su función principal es permitir la lectura y
+          escritura de datos en los platos magnéticos del disco duro, que son
+          discos metálicos recubiertos con una fina capa de material magnético
+          donde se almacenan los datos.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Componentes del Cabezal</div>
+      <div class="cuerpo">
+        <img src="./img/cabezal.jpeg" alt="muestra" />
+        <ul>
+          <li>
+            Cabezal de Lectura/Escritura (R/W Head): Es la parte principal del
+            cabezal que se mueve sobre la superficie del disco y es responsable
+            de la lectura y escritura de datos.
+          </li>
+          <li>
+            Bobina de Voz (Voice Coil): Es un electroimán que controla la
+            posición del cabezal sobre el plato. La corriente que fluye a través
+            de la bobina genera un campo magnético que interactúa con el campo
+            magnético del imán permanente, permitiendo que el cabezal se mueva
+            con precisión.
+          </li>
+          <li>
+            Suspensión: Es una estructura flexible que conecta la bobina de voz
+            al cabezal de lectura/escritura. La suspensión permite que el
+            cabezal se desplace de manera controlada mientras sigue la
+            superficie del plato.
+          </li>
+          <li>
+            Controlador de Cabezales (Head Actuator): Este componente controla
+            el movimiento preciso del cabezal de lectura/escritura y su posición
+            sobre el plato. Utiliza señales eléctricas para ajustar la posición
+            y garantizar un acceso rápido a los datos.
+          </li>
+        </ul>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Función Lectura</div>
+      <div class="cuerpo">
+        <img src="./img/lectura.png" alt="muestra" />
+        <p>
+          Cuando se desea leer datos almacenados en el disco duro, el cabezal de
+          lectura/escritura se coloca sobre la pista correcta del plato, y la
+          bobina de voz ajusta la posición del cabezal. El cabezal genera un
+          campo magnético variable que interactúa con el campo magnético de los
+          datos almacenados en el plato.
+        </p>
+        <ul>
+          <li>
+            Efecto de inducción magnética: Cuando el cabezal pasa sobre un área
+            magnética del plato, se induce una corriente eléctrica en el cabezal
+            de lectura/escritura. Esta corriente inducida es proporcional a la
+            magnetización del área del plato, lo que representa los datos
+            almacenados.
+          </li>
+          <li>
+            Amplificación de señal: La señal eléctrica débil inducida se
+            amplifica mediante un preamplificador en el cabezal de
+            lectura/escritura para mejorar la calidad de la lectura de datos.
+            Luego, esta señal amplificada se envía al controlador de disco duro
+            para su procesamiento.
+          </li>
+        </ul>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Función Escritura</div>
+      <div class="cuerpo">
+        <img src="./img/escritura.png" alt="muestra" />
+        <p>
+          Cuando se requiere escribir datos en el disco duro, el proceso es más
+          complejo y requiere una serie de pasos precisos:
+        </p>
+        <ul>
+          <li>
+            Posicionamiento del cabezal: El controlador de cabezales posiciona
+            el cabezal de lectura/escritura sobre la ubicación adecuada en el
+            plato.
+          </li>
+          <li>
+            Borrado (Erase): Antes de escribir nuevos datos, el cabezal emite un
+            campo magnético intenso para borrar cualquier información
+            previamente almacenada en esa área del plato.
+          </li>
+          <li>
+            Escritura (Write): Luego, se aplica una corriente eléctrica
+            controlada al cabezal, que genera un campo magnético específico en
+            el área del plato. Esta magnetización representa los nuevos datos
+            que se están escribiendo.
+          </li>
+          <li>
+            Verificación: Para garantizar que los datos se hayan escrito
+            correctamente, se realiza una verificación comparando la
+            magnetización con los datos originales. Si la verificación es
+            exitosa, los datos se consideran escritos con éxito.
+          </li>
+          <li>
+            Finalización: Una vez que se ha confirmado la escritura exitosa, el
+            controlador de disco duro marca el proceso como completado y permite
+            el acceso futuro a esos datos.
+          </li>
+        </ul>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Representación Magnética</div>
+      <div class="cuerpo">
+        <p>
+          Los datos en un disco duro se almacenan utilizando la propiedad
+          magnética de los materiales. Cada plato del disco duro está cubierto
+          con una capa de material magnético que puede ser magnetizado en dos
+          direcciones: positiva y negativa. Estas dos direcciones de
+          magnetización se utilizan para representar los bits de datos.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Bit & Polaridad</div>
+      <div class="cuerpo">
+        <p>
+          En el contexto del almacenamiento de datos en disco duro, un "bit" es
+          la unidad más pequeña de información y se representa mediante la
+          polaridad magnética. Por ejemplo:
+        </p>
+        <ul>
+          <li>
+            Polaridad Positiva (North): Puede representar un valor binario de
+            "1".
+          </li>
+          <li>
+            Polaridad Negativa (South): Puede representar un valor binario de
+            "0"
+          </li>
+        </ul>
+        <p>
+          La capacidad del disco duro para cambiar la polaridad de las áreas
+          magnéticas en el plato es lo que permite la escritura y reescritura de
+          datos.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Codificación de Datos</div>
+      <div class="cuerpo">
+        <img src="./img/codificacion.jpeg" alt="muestra" />
+        <p>
+          Para representar datos más complejos, como caracteres alfanuméricos o
+          instrucciones de programas, se utiliza la codificación. Uno de los
+          métodos de codificación más comunes es el código ASCII (American
+          Standard Code for Information Interchange) que asigna valores
+          numéricos a los caracteres. Estos valores numéricos se almacenan en
+          formato binario en el disco duro.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Formato de Almacenamiento</div>
+      <div class="cuerpo">
+        <img src="./img/almacenamiento.jpeg" alt="muestra" />
+        <p>
+          Los datos en un disco duro se organizan en unidades más grandes
+          llamadas "sectores". Cada sector suele tener una capacidad de 512
+          bytes o más. Los sistemas de archivos, como NTFS o FAT en sistemas
+          Windows, se encargan de organizar estos sectores en estructuras de
+          datos más complejas, como archivos y directorios.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="titulo">Detección & Corrección de Errores</div>
+      <div class="cuerpo">
+        <img src="./img/errores.jpeg" alt="muestra" />
+        <p>
+          Para garantizar la integridad de los datos almacenados, los discos
+          duros utilizan técnicas de detección y corrección de errores, como el
+          código de corrección de errores Reed-Solomon. Esto permite detectar y,
+          en algunos casos, corregir errores que pueden ocurrir debido a la
+          degradación magnética o problemas en el proceso de lectura/escritura.
+        </p>
+      </div>
+      <div class="pie">
+        <a target="_blank" href="./bibliografia.html">Más información</a>
+      </div>
+    </div>
     <main>
       <article>
-        <div>
-          <h2>¿Que es un disco duro?</h2>
-          <p>
-            Un disco duro es una unidad física de almacenamiento de datos, que
-            permite al equipo almacenar grandes cantidades de información, y hace
-            posible la lectura y escritura al mismo tiempo. La memoria de los
-            discos duros no es volátil, es decir que los datos que ocupamos en
-            dicho disco permanecen ahí hasta ser ocupados por otros o eliminados
-            de manera permanente con un formateo a bajo nivel, de lo contrario se
-            podrían obtener con un recuperador de archivos.
-          </p>
-          <img src="./img/disco duro.PNG" alt="disco duro" />
+        <h2>Tarjeta controladora de disco duro</h2>
+        <div class="tarjeta">
+          <div class="titulo">¿Qué es la tarjeta controladora?</div>
+          <div class="cuerpo">
+            <p>
+              La tarjeta controladora de disco duro, también conocida como
+              “controlador”, es una pieza del hardware que integra a los
+              conectores de datos y de alimentación con los circuitos impresos
+              de cobre y otros componentes. Su función es controlar las cabezas
+              de lectura y escritura usando una especie de mapa de los platos
+              internos, de modo que se tenga acceso a la información que
+              almacena el disco duro.
+            </p>
+          </div>
+          <div class="pie">
+            <a target="_blank" href="./tarjeta.html">Más información</a>
+          </div>
         </div>
-        <section>
-          <h3>¿Cual es la estructura de un disco duro?</h3>
-          <p>
-            Un disco rígido no está compuesto por un solo disco, sino por varios
-            discos rígidos que pueden ser de metal, vidrio o cerámica, apilados
-            muy juntos entre sí y llamados platos.
-          </p>
-          <img
-            src="./img/estructura disco duro.PNG"
-            alt="Estructura de disco duro"
-          />
-          <p>
-            Los discos giran rápidamente alrededor de un eje (en realidad, a
-            varios miles de revoluciones por minuto) en sentido contrario a las
-            agujas de un reloj. El ordenador funciona en modo binario, lo cual
-            significa que los datos se almacenan en forma de ceros y unos
-            (denominados bits).
-          </p>
-          <p>
-            Los discos rígidos contienen millones de estos bits, almacenados muy
-            próximos unos de otros en una delgada capa magnética de unos pocos
-            micrones de espesor, recubierta a su vez por una película
-            protectora.
-          </p>
-          <p>
-            Estos datos pueden leerse y escribirse por medio de cabezales de
-            lectura ubicados a ambos lados de los platos. Estos cabezales son
-            electroimanes que suben y bajan para leer la información o bien
-            escribirla. Los cabezales de lectura se encuentran a solo unos
-            micrones de la superficie, separados por una capa de aire creada por
-            la rotación de los discos, que genera una rotación de
-            aproximadamente 250 km/h (150 mph). Más aún, estos cabezales son
-            móviles y se pueden mover hacia los laterales para que las cabezas
-            puedan barrer toda la superficie. Sin embargo, los cabezales se
-            encuentran unidos entre sí y solamente uno de ellos puede leer o
-            escribir en un momento preciso. Se utiliza el término cilindro para
-            hacer referencia a todos los datos almacenados .
-          </p>
-          <p>
-            El mecanismo completo de precisión se encuentra dentro de una caja
-            totalmente hermética, debido a que la más mínima partícula puede
-            degradar la superficie del disco.
-          </p>
-        </section>
-        <section>
-          <h3>¿Como funciona un disco duro?</h3>
-          <p>
-            Se dice que los cabezales de lectura/escritura son "inductivos", lo
-            que significa que pueden generar un campo magnético. Esto es de
-            especial importancia en el momento de la escritura: los cabezales,
-            al crear campos positivos o negativos, tienden a polarizar la
-            superficie del disco en un área muy diminuta, de modo tal que cuando
-            luego se leen, la inversión de polaridad procede a completar el
-            circuito con el cabezal de lectura. Estos campos luego son
-            transformados mediante un conversor analógico-digital (CAD) en 0 o 1
-            para que el ordenador los pueda comprender.
-          </p>
-          <img src="./img/funcion disco duro.PNG" alt="Funcion de disco duro" />
-          <p>
-            Los cabezales comienzan a escribir datos comenzando desde el borde
-            del disco (pista 0) y avanzando hacia el centro. Los datos se
-            organizan en círculos concéntricos denominados pistas, creadas por
-            un formateo de bajo nivel. Estas pistas están separadas en zonas
-            (entre dos radios) llamadas sectores, que contienen los datos (por
-            lo menos 512 octetos por sector).
-          </p>
-          <p>
-            Finalmente, el término clúster (también llamado unidad de
-            asignación) se refiere al área mínima que puede ocupar un archivo
-            dentro del disco rígido. Un sistema operativo utiliza bloques, que
-            son en realidad grupos de sectores (entre 1 y 16 sectores). Un
-            archivo pequeño puede llegar a ocupar múltiples sectores (un
-            clúster).
-          </p>
-          <p>
-            En los discos rígidos antiguos, el direccionamiento solía realizarse
-            manualmente, mediante la definición de la posición de los datos
-            desde las coordenadas Cilindro/Cabezal/Sector (CHS).
-          </p>
-        </section>
-        <section>
-          <h2>¿Cómo almacenar datos en el Disco Duro?</h2>
-          <p>
-            El cabezal de lectura/escritura en un disco duro es uno de los
-            componentes más críticos y complejos de este dispositivo de
-            almacenamiento. Su función principal es permitir la lectura y
-            escritura de datos en los platos magnéticos del disco duro, que son
-            discos metálicos recubiertos con una fina capa de material magnético
-            donde se almacenan los datos.
-          </p>
-          <h4>Componentes del cabezal</h4>
-
-          <ul>
-            <li>
-              Cabezal de Lectura/Escritura (R/W Head): Es la parte principal del
-              cabezal que se mueve sobre la superficie del disco y es
-              responsable de la lectura y escritura de datos.
-            </li>
-            <li>
-              Bobina de Voz (Voice Coil): Es un electroimán que controla la
-              posición del cabezal sobre el plato. La corriente que fluye a
-              través de la bobina genera un campo magnético que interactúa con
-              el campo magnético del imán permanente, permitiendo que el cabezal
-              se mueva con precisión.
-            </li>
-            <li>
-              Suspensión: Es una estructura flexible que conecta la bobina de
-              voz al cabezal de lectura/escritura. La suspensión permite que el
-              cabezal se desplace de manera controlada mientras sigue la
-              superficie del plato.
-            </li>
-            <li>
-              Controlador de Cabezales (Head Actuator): Este componente controla
-              el movimiento preciso del cabezal de lectura/escritura y su
-              posición sobre el plato. Utiliza señales eléctricas para ajustar
-              la posición y garantizar un acceso rápido a los datos.
-            </li>
-          </ul>
-
-          <h4>Funcion de Lectura:</h4>
-          <p>
-            : Cuando se desea leer datos almacenados en el disco duro, el
-            cabezal de lectura/escritura se coloca sobre la pista correcta del
-            plato, y la bobina de voz ajusta la posición del cabezal. El cabezal
-            genera un campo magnético variable que interactúa con el campo
-            magnético de los datos almacenados en el plato.
-          </p>
-          <ul>
-            <li>
-              Efecto de inducción magnética: Cuando el cabezal pasa sobre un
-              área magnética del plato, se induce una corriente eléctrica en el
-              cabezal de lectura/escritura. Esta corriente inducida es
-              proporcional a la magnetización del área del plato, lo que
-              representa los datos almacenados.
-            </li>
-            <li>
-              Amplificación de señal: La señal eléctrica débil inducida se
-              amplifica mediante un preamplificador en el cabezal de
-              lectura/escritura para mejorar la calidad de la lectura de datos.
-              Luego, esta señal amplificada se envía al controlador de disco
-              duro para su procesamiento.
-            </li>
-          </ul>
-          <h4>Funcion de Escritura</h4>
-          <p>
-            : Cuando se requiere escribir datos en el disco duro, el proceso es
-            más complejo y requiere una serie de pasos precisos:
-          </p>
-          <ul>
-            <li>
-              Posicionamiento del cabezal: El controlador de cabezales posiciona
-              el cabezal de lectura/escritura sobre la ubicación adecuada en el
-              plato.
-            </li>
-            <li>
-              Borrado (Erase): Antes de escribir nuevos datos, el cabezal emite
-              un campo magnético intenso para borrar cualquier información
-              previamente almacenada en esa área del plato.
-            </li>
-            <li>
-              Escritura (Write): Luego, se aplica una corriente eléctrica
-              controlada al cabezal, que genera un campo magnético específico en
-              el área del plato. Esta magnetización representa los nuevos datos
-              que se están escribiendo.
-            </li>
-            <li>
-              Verificación: Para garantizar que los datos se hayan escrito
-              correctamente, se realiza una verificación comparando la
-              magnetización con los datos originales. Si la verificación es
-              exitosa, los datos se consideran escritos con éxito.
-            </li>
-            <li>
-              Finalización: Una vez que se ha confirmado la escritura exitosa,
-              el controlador de disco duro marca el proceso como completado y
-              permite el acceso futuro a esos datos.
-            </li>
-          </ul>
-          <h4>Representacion magnética</h4>
-          <p>
-            Los datos en un disco duro se almacenan utilizando la propiedad
-            magnética de los materiales. Cada plato del disco duro está cubierto
-            con una capa de material magnético que puede ser magnetizado en dos
-            direcciones: positiva y negativa. Estas dos direcciones de
-            magnetización se utilizan para representar los bits de datos.
-          </p>
-          <h4>Bit y Polaridad</h4>
-          <p>
-            En el contexto del almacenamiento de datos en disco duro, un "bit"
-            es la unidad más pequeña de información y se representa mediante la
-            polaridad magnética. Por ejemplo:
-          </p>
-          <ul>
-            <li>
-              Polaridad Positiva (North): Puede representar un valor binario de
-              "1".
-            </li>
-            <li>
-              Polaridad Negativa (South): Puede representar un valor binario de
-              "0"
-            </li>
-          </ul>
-          <p>
-            La capacidad del disco duro para cambiar la polaridad de las áreas
-            magnéticas en el plato es lo que permite la escritura y reescritura
-            de datos.
-          </p>
-          <h4>Codificación de datos</h4>
-          <p>
-            Para representar datos más complejos, como caracteres alfanuméricos
-            o instrucciones de programas, se utiliza la codificación. Uno de los
-            métodos de codificación más comunes es el código ASCII (American
-            Standard Code for Information Interchange) que asigna valores
-            numéricos a los caracteres. Estos valores numéricos se almacenan en
-            formato binario en el disco duro.
-          </p>
-          <h4>Formato de Almacenamiento</h4>
-          <p>
-            : Los datos en un disco duro se organizan en unidades más grandes
-            llamadas "sectores". Cada sector suele tener una capacidad de 512
-            bytes o más. Los sistemas de archivos, como NTFS o FAT en sistemas
-            Windows, se encargan de organizar estos sectores en estructuras de
-            datos más complejas, como archivos y directorios.
-          </p>
-          <h4>Detección y Correción de errores</h4>
-          <p>
-            : Para garantizar la integridad de los datos almacenados, los discos
-            duros utilizan técnicas de detección y corrección de errores, como
-            el código de corrección de errores Reed-Solomon. Esto permite
-            detectar y, en algunos casos, corregir errores que pueden ocurrir
-            debido a la degradación magnética o problemas en el proceso de
-            lectura/escritura.
-          </p>
-        </section>
       </article>
       <article>
-        <h2>Tarjeta controladora de Disco duro</h2>
-        <p>
-          La tarjeta controladora de disco duro, también conocida como
-          “controlador”, es una pieza del hardware que integra a los conectores
-          de datos y de alimentación con los circuitos impresos de cobre y otros
-          componentes. Su función es controlar las cabezas de lectura y
-          escritura usando una especie de mapa de los platos internos, de modo
-          que se tenga acceso a la información que almacena el disco duro.
-        </p>
-        <p>
-          Además, la tarjeta controladora de disco duro controla el movimiento
-          del motor y servomotor, la velocidad, la alimentación de las piezas
-          electrónicas que lo componen, la transferencia de datos desde y hacia
-          el disco duro
-        </p>
-        <p>
-          La tarjeta controladora actúa como interfaz entre la placa base y
-          otros componentes de las computadoras, así como de la placa madre, de
-          modo que se pueda tener acceso a la información del disco duro en
-          cuestión.
-        </p>
-        <p>
-          Además de dar acceso a la información, la tarjeta controladora de
-          disco duro se encarga de gestionar la información, mantener el
-          movimiento de las partes del disco para que trabaje a niveles
-          operativos adecuados, revisar y corregir errores, controlar el flujo
-          de datos que entra y sale de los platos magnéticos en los que se
-          almacena la información, entre otros. Por todas estas funciones, se
-          dice que la tarjeta controladora de disco duro es el cerebro del disco
-          duro.
-        </p>
-        <p>
-          SATA (Serial Advanced Technology Attachment), en español el accesorio
-          de tecnología avanzada en serie, es una interfaz de transferencia de
-          datos entre los dispositivos de almacenamiento como el disco duro y la
-          placa base, permite una arquitectura conocida como “de punto a punto”
-          que significa una conexión física directa entre el dispositivo y el
-          puerto. Cada dispositivo se conecta a un puerto diferente, de modo que
-          se eviten interferencias y tener que configurar un dispositivo como
-          maestro y otro como esclavo.
-        </p>
-        <p>
-          Al observar un disco duro veremos dos ranuras para conectarse, la
-          primera y más pequeña corresponde a la interfaz SATA, y la segunda y
-          más grande es el conector de alimentación de energía.
-        </p>
-      </article>
-      <article>
-        <h2>Envío de Datos desde el Disco Duro</h2>
-        <p>
-          El proceso de cómo se envían los datos desde el disco duro a la
-          computadora mediante el controlador implica una serie de operaciones
-          técnicas y protocolos de comunicación.
-        </p>
-        <ol>
-          <li>
-            Almacenamiento en el buffer: Los datos recién leídos se almacenan
-            temporalmente en el buffer interno del disco duro. Este buffer actúa
-            como un búfer de transferencia para asegurar una comunicación fluida
-            entre el disco duro y la computadora.
-          </li>
-          <li>
-            Transferencia al controlador de disco duro: Los datos almacenados en
-            el buffer del disco duro se envían al controlador de disco duro, que
-            actúa como intermediario entre el disco y el sistema de
-            almacenamiento de la computadora.
-          </li>
-          <li>
-            Transferencia al controlador de almacenamiento: El controlador de
-            disco duro se comunica con el controlador de almacenamiento de la
-            computadora a través de la interfaz de disco, que puede ser SATA,
-            SAS u otra. La transferencia de datos desde el buffer del disco duro
-            al controlador de almacenamiento se realiza utilizando el protocolo
-            y las señales específicas de la interfaz.
-          </li>
-          <li>
-            Comunicación con la computadora: El controlador de almacenamiento de
-            la computadora recibe los datos mediante un bus y los transmite a la
-            memoria principal de la computadora utilizando protocolos de
-            comunicación de almacenamiento, como AHCI (Advanced Host Controller
-            Interface) en el caso de SATA.
-          </li>
-          <li>
-            Entrega al sistema operativo: Los datos se entregan al sistema
-            operativo, que los dirige al proceso o la aplicación que realizó la
-            solicitud original. Los datos se pueden acceder desde la memoria
-            principal de la computadora para su procesamiento o visualización.
-          </li>
-        </ol>
-      </article>
-      <article>
-        <h2>Accesos e Interfaces</h2>
-        <p>
-          Las unidades de disco duro se conectan a las computadoras a través de
-          diversos tipos de interfaces, incluyendo ATA paralelo, ATA serie,
-          SCSI, SAS (SCSI conectado en serie), canal de fibra, IEEE 1394, USB,
-          entre otros. Estas interfaces son digitales y permiten la comunicación
-          entre la unidad y el sistema, independientemente de cómo se codifican
-          los datos internamente en la unidad o cuántos discos y cabezales
-          físicos tenga la unidad.
-        </p>
-        <p>
-          Para procesar las señales analógicas de los cabezales de
-          lectura/escritura, las unidades modernas utilizan un DSP (Procesador
-          de Señal Digital) que emplea técnicas como PRML y corrección de
-          errores Reed-Solomon. Esto permite decodificar los datos y enviarlos a
-          la interfaz estándar. El DSP también monitorea la tasa de errores,
-          realiza reasignaciones de sectores defectuosos y recopila datos para
-          funciones de autodiagnóstico y análisis.
-        </p>
-        <p>
-          Las interfaces modernas utilizan un solo cable de datos/control para
-          conectar la unidad al host, junto con un cable de alimentación directo
-          a la fuente de alimentación. En contraste, las interfaces más antiguas
-          requerían cables separados para señales de datos y control.
-        </p>
-        <p>Algunos de los estándares de interfaz más conocidos incluyen:</p>
-        <ul>
-          <li>
-            SCSI (Small Computer System Interface): Utilizado en servidores,
-            estaciones de trabajo y computadoras como Amiga, Atari ST y
-            Macintosh. Aunque muchas computadoras han migrado a interfaces más
-            nuevas, el conjunto de comandos SCSI todavía se utiliza en la
-            interfaz SAS moderna.
-          </li>
-          <li>
-            IDE (Integrated Drive Electronics), también conocido como ATA
-            (Advanced Technology Attachment): Movió el controlador HDD de la
-            tarjeta de interfaz a la unidad de disco, lo que estandarizó la
-            interfaz host/controlador y redujo la complejidad. IDE utilizaba
-            cables de 40 pines, que posteriormente se actualizaron a cables de
-            80 conductores para admitir modos de alta velocidad como UDMA.
-          </li>
-          <li>
-            EIDE (Enhanced Integrated Drive Electronics): Una mejora no oficial
-            de IDE que introdujo DMA para transferir datos directamente entre la
-            memoria y el disco sin la intervención de la CPU.
-          </li>
-          <li>
-            Fibre Channel (FC): Un sucesor de la interfaz SCSI en el ámbito
-            empresarial, utilizado en redes de almacenamiento (SAN). Aunque se
-            llama "Fibre," a menudo se utiliza cobre en lugar de fibra óptica
-            para conexiones de unidad.
-          </li>
-          <li>
-            SAS (Serial Attached SCSI): Un protocolo de comunicación serie que
-            permite transferencias de datos a alta velocidad y es compatible con
-            SATA. Utiliza una conexión mecánicamente compatible con discos duros
-            SATA estándar.
-          </li>
-          <li>
-            SATA (Serial ATA): Utilizado comúnmente en computadoras personales,
-            utilizan conexiones serie para la transmisión de datos. Las unidades
-            SATA pueden ser controladas por controladores SAS en algunos casos,
-            pero no al revés.
-          </li>
-        </ul>
-      </article>
-      <article>
-        <section>
-          <h4>Interfaces de disco duro:</h4>
-          <ul>
-            <li>IDE (Integrated Drive Electronics): IDE integra el controlador de disco duro con el
-              propio disco. Esto reduce la cantidad de cables y mejora la confiabilidad de la
-              transmisión de datos. Aunque es económico y compatible, se ha vuelto menos común
-              en favor de interfaces más modernas.
-              </li>
-              <li>SCSI (Small Computer System Interface): SCSI es una interfaz de alta velocidad
-                que se utiliza principalmente en servidores y estaciones de trabajo avanzadas. Ofrece
-                ventajas como multitarea, alto ancho de banda y capacidad de intercambio en
-                caliente, pero es más costoso que IDE.
-                </li>
-                <li>
-                  Canal de fibra (Fiber Channel): Inicialmente diseñado para redes, el canal de fibra
-          se utiliza en sistemas de disco duro de alto rendimiento. Ofrece características como
-          intercambio en caliente, ancho de banda de alta velocidad y conexión de larga
-          distancia.
-                </li>
-                <li>
-                  SATA (Serial ATA): SATA es una interfaz de disco duro serial utilizada en la
-          mayoría de las computadoras personales. Ofrece ventajas como mayor capacidad de
-          corrección de errores y velocidades de transmisión más rápidas que IDE.
-                </li>
-                <li>
-                  SATA II: SATA II es una versión mejorada de SATA que aumenta la velocidad de
-          transmisión externa de 1.5Gbps a 3Gbps y presenta tecnologías adicionales como
-          NCQ (Native Command Queuing).
-                </li>
-          </ul>
-          <img src="/img/partes del disco duro.png" alt="">
-        </section>
+        <a href="#">Ir Arriba</a>
       </article>
     </main>
-    <footer>
-      <div>
-        <h2>Integrantes: </h2>
-        <ul>
-          <li><strong>Eros Mariotti</strong></li>
-          <li><strong>Laureano Berna</strong></li>
-          <li><strong>Jennifer Contreras</strong></li>
-          <li><strong>Julieta Sena</strong></li>
-          <li><strong>Chiara Moyano</strong></li>
-          <li><strong>Julio Rivas</strong></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Bibliografia: </h2>
-        <ul class="lista_bibliografia">
-          <li>
-            <a href="https://www.elgrupoinformatico.com/noticias/disco-duro-que-tipos-como-funciona-t79244.html">
-              Disco duro: qué es, tipos y cómo funciona (elgrupoinformatico.com).
-            </a>
-          </li>
-          <li><a href="https://es.ccm.net/aplicaciones-e-internet/museo-de-internet/enciclopedia/11014-que-es-un-disco-duro-y-como-funciona/">
-            Fuente: Disco duro: qué es y cuál es su función (ccm.net)
-          </a></li>
-          <li><a href="https://www.computerhope.com/jargon/h/harddriv.htm">
-            Fuente: ¿Qué es un disco duro? (computerhope.com)
-          </a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Hard_disk_drive">
-            Fuente: Unidad de disco duro - Wikipedia, la enciclopedia libre
-          </a></li>
-        </ul>
-      </div>
-    </footer>
+    <script src="./navbar.js"></script>
   </body>
 </html>
