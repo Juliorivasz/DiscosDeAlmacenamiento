@@ -76,7 +76,6 @@ footer {
 #contenedorP {
   width: 1000px;
   background-color: white;
- 
 }
 
 header {
@@ -96,10 +95,14 @@ header {
   padding: 0;
 }
 
+.description_disk {
+  width: 50%;
+}
+
 .tarjeta {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 500px;
   border: 1px solid lightgray;
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
